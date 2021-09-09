@@ -22,7 +22,6 @@ question5.myParam = "5";
 function show(a) {
   let b = a.currentTarget.myParam;
   let answer = document.querySelector("#question" + b + " :nth-child(2)");
-  console.log(answer)
   let arrow = document.querySelector(".arrow" + b);
   let question = document.querySelector("#question" + b);
 
