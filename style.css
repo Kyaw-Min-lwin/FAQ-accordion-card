@@ -12,12 +12,10 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
     min-height: 100vh;
-    height: 100vh;
     background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     display: flex;
     justify-content: center;
     align-items: center;
-    color: hsl(238, 29%, 16%);
 }
 
 .card {
@@ -25,6 +23,7 @@ body {
     background: url(./images/bg-pattern-desktop.svg) no-repeat white;
     background-size: 42em 54em;
     background-position: -15em -12em;
+    box-shadow: 0px 10px 7px 1px hsla(238, 29%, 16%, 0.5);
     /*  */
     display: flex;
     align-items: center;
@@ -88,6 +87,7 @@ h1 {
     border-bottom: 0.5px solid hsl(240, 5%, 91%);
     margin: 10px;
     padding: 5px 0 15px;
+    font-weight: 700;
     color: hsl(237, 12%, 33%);
 }
 
@@ -98,17 +98,29 @@ h1 {
 
 [id*=question] p:first-of-type {
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .answer {
     display: none;
-    color: hsl(240, 6%, 50%);
 }
 
-.arrow {
+.misc {
+    margin-top: 1rem;
+    color: hsl(240, 6%, 50%);
+    font-weight: 400;
+}
+
+[class*=arrow] {
     padding-top: 5px;
     float: right;
+    transform: rotate(0deg);
+}
+
+.down {
+    transform: rotate(180deg);
+    padding-left: 0px;
+    padding-bottom: 5px;
 }
 
 @media (min-width:750px) and (max-width:950px) {
@@ -121,6 +133,9 @@ h1 {
 }
 
 @media (max-width:749px) {
+    body {
+        height: auto;
+    }
     .card {
         width: 90%;
         justify-content: center;
@@ -131,10 +146,12 @@ h1 {
     }
     #woman {
         content: url(./images/illustration-woman-online-mobile.svg);
-        top: -9rem;
-        width: 20%;
-        left: 30%;
+        top: -8rem;
+        margin: auto;
+        margin-left: -2.5rem;
         width: auto;
+        left: auto;
+        /* right: auto; */
     }
     .FAQ-container {
         left: 0;
@@ -142,7 +159,7 @@ h1 {
         width: 100%;
     }
     h1 {
-        margin: 10rem 0 2rem;
+        margin: 15rem 0 2rem;
     }
     #answer-container {
         width: 100%;
